@@ -1,4 +1,25 @@
 #include <stdio.h>
+#include <stdlib.h>
+
+double soma (int a, int b) {
+    double resultado = a + b;
+    return resultado;
+}
+
+double subtracao (int a, int b) {
+    double resultado = a - b;
+    return resultado;
+}
+
+double multiplicacao (int a, int b) {
+    double resultado = a * b;
+    return resultado;
+}
+
+double divisao (int a, int b){ 
+    double resultado = a / b;
+    return resultado;
+}
  
 int main() {
 
@@ -27,21 +48,17 @@ int main() {
     // Constroi cada resultado de acordo com a opração escolhida e a tecla digitada.
     switch (operacao) {
         case '1':
-            resultado = n1 + n2;
-            printf("O resultado da adicao é: %.2lf\n", resultado);
+            printf("O resultado da adicao e: %.2lf\n", soma(n1, n2));
             break;
-        case '2':
-            resultado = n1 - n2;
-            printf("O resultado da subtracao é: %.2lf\n", resultado);
+        case '2' :
+            printf("O resultado da subtracao e: %.2lf\n", subtracao(n1, n2));
             break;
         case '3':
-            resultado = n1 * n2;
-            printf("O resultado da multiplicacao é: %.2lf\n", resultado);
+            printf("O resultado da multiplicacao e: %.2lf\n", multiplicacao(n1, n2));
             break;
         case '4':
             if (n2 != 0) {
-                resultado = n1 / n2;
-                printf("O resultado da divisao é: %.2lf\n", resultado);
+                printf("O resultado da divisao é: %.2lf\n", divisao(n1, n2));
             } else {
                 printf("Erro: Divisao por zero nao e permitida.\n");
             }
